@@ -39,7 +39,7 @@ class Player {
             while (this.ToOrder != 4) {
                 Report = Report + "\r\nWe recommend that you order 4 more units this week.";
                 Report = Report + "\r\nHow many more units do you wish to order now?";
-                this.ToOrder = prompt(Report, 0);
+                this.ToOrder = prompt(Report);
             }
         }
         else if (_WeekNumber = 5)
@@ -47,7 +47,7 @@ class Player {
             while (this.ToOrder < 0) {
                 Report = Report + "\r\nFrom now on, you may now order whatever number of units you think you need, as long as the value is zero or greater.";
                 Report = Report + "\r\nHow many more units do you wish to order now?";
-                this.ToOrder = prompt(Report, 0);
+                this.ToOrder = prompt(Report);
             }            
         }            
         else if (_WeekNumber = 36)
@@ -58,7 +58,7 @@ class Player {
         else 
             while (this.ToOrder < 0) {
                 Report = Report + "\r\nHow many more units do you wish to order now? (Please input a value that is 0 or greater)"
-                this.ToOrder = prompt(Report, 0);
+                this.ToOrder = prompt(Report);
             }
     }
 }
@@ -141,8 +141,8 @@ class Team {
 
 
 /* 
-I'm not sure how to implement the equivalent of a C main() function in JS, so I've put the pseudocode for that function here until I work out what to do...
-- Create 35(?) instances of "Team" object (each Player within a Team is to be accessed by one real-life player)
+I'm not sure how to implement a "main" function in JS, so I've put the pseudocode for that function here until I work out what to do...
+- Create 35(?) instances of "Team" object (each Player within a Team is to be operated remotely by one real-life player)
 - For each Team, do the following while Team.Week < 36
     - advanceStock
     - fulfilOrders
